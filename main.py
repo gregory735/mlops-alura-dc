@@ -27,7 +27,7 @@ import pickle
 # para testar a aplicacao, deve ser feito um post, pode utilizar o postman
 
 # modelo pode ser feito antes e salvo formato sav usando pickle
-model = pickle.load(open(r'models/modelo.sav','rb'))
+model = pickle.load(open(r'../../models/modelo.sav','rb'))
 
 columns = ['tamanho', 'ano', 'garagem']
 
@@ -84,6 +84,4 @@ def cotacao():
     return jsonify(preco=preco[0])
 
 # para habilitar o debugmode assim quando salvar o arquivo o flask reseta automaticamente
-
-if __name__ == '__main__':
-    app.run(debug=True, hosts='0.0.0.0')
+app.run(debug=True, hosts='0.0.0.0')
